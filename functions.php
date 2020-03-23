@@ -85,4 +85,19 @@ function include_template($name, $data) {
 
     return $result;
     }
+
+function timesss() {
+	$now = strtotime("now");
+	$tomorrow = strtotime("tomorrow");
+	$diffsek = $tomorrow - $now;  
+
+	 $diffch = floor($diffsek/3600); //часы 
+	 $dm = $diffsek - ($diffch*3600); 	 
+	 $dp = floor($dm/60); //минуты 
+
+	 
+	 $itog = sprintf("%d:%d", $diffch, $dp);
+	 return $itog;
+
+}
     ?>
